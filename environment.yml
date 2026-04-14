@@ -1,0 +1,16 @@
+name: hadcnn-benchmark
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - tqdm
+  - joblib
+  - pytorch
+  - pip
