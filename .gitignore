@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Notebook cache
+.ipynb_checkpoints/
+
+# Hidden/system
+.DS_Store
+.sys/
+
+# Training artifacts
+checkpoints/
+runs/
+logs/
+artifacts/
+outputs/
+cache/
+results/raw/
+results/tmp/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.joblib
+*.pkl
+*.h5
+
+# Large arrays / cached tables
+*.npy
+*.npz
+
+# Raw/derived local datasets
+Dataset/NIR/
+Dataset/NIR_cross_humidity/
+Dataset/NIR_repeated_holdout/
+
+# External raw mirror
+external_data/usgs_splib07/ASCIIData/
+usgs_splib07/ASCIIData/
+
+# Secrets / private
+.env
+private/
+secrets/
+*.pem
+*.key
+
+# Archives
+*.zip
+*.tar
+*.gz
