@@ -1,0 +1,20 @@
+{
+  "description": "Alternative non-overlapping humidity split B (staggered split from exp510_dataset.py)",
+  "preset_name": "split_B_shifted",
+  "train_humidity_levels": [
+    0.0,
+    0.18,
+    0.36,
+    0.54,
+    0.72
+  ],
+  "test_humidity_levels": [
+    0.09,
+    0.27,
+    0.45,
+    0.63,
+    0.81
+  ],
+  "non_overlapping": true,
+  "source": "exp510_dataset.py PRESET_SPLITS['split_B_shifted']"
+}

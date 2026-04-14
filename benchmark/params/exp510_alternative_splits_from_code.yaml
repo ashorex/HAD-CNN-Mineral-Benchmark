@@ -1,0 +1,36 @@
+experiment: "5.10 alternative non-overlapping humidity splits"
+dataset_dir_default: "Dataset/NIR_cross_humidity"
+results_root_default: "results/exp510_non_overlapping"
+
+presets:
+  split_A_current:
+    train_levels: [0.10, 0.30, 0.50, 0.70, 0.90]
+    test_levels: [0.00, 0.20, 0.40, 0.60, 0.80]
+    description: "Current odd-train/even-test non_overlapping split"
+  split_B_shifted:
+    train_levels: [0.00, 0.18, 0.36, 0.54, 0.72]
+    test_levels: [0.09, 0.27, 0.45, 0.63, 0.81]
+    description: "Alternative staggered non-overlapping split within the same humidity range"
+  split_C_shifted:
+    train_levels: [0.05, 0.23, 0.41, 0.59, 0.77]
+    test_levels: [0.14, 0.32, 0.50, 0.68, 0.86]
+    description: "Second alternative staggered non_overlapping split"
+
+training:
+  seeds: [42, 52, 62, 72, 82]
+  epochs: 60
+  batch_size: 32
+  optimizer: Adam
+  lr: 0.0002
+  weight_decay: 0.0001
+
+data_generation:
+  n_train_aug: 10
+  n_test_repeat: 10
+
+perturbation_defaults:
+  alpha: 2.0
+  delta: 0.0015
+  sigma0: 0.8
+  eta: 1.2
+  kappa: 0.02

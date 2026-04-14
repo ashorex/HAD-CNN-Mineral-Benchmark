@@ -1,0 +1,104 @@
+{
+  "description": "Main source-file-level split extracted from uploaded NIR_cross_humidity train.csv and test.csv, normalized to repository-relative paths",
+  "path_convention": "Paths are normalized to repository-relative locations under external_data/usgs_splib07/",
+  "train_sources": {
+    "calcite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_CO2004_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_GDS304_75-150um_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_HS48.3B_BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_WS272_BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_WS272_NIC4aaa_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_CO2004_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_GDS304_75-150um_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_REE-bearing_WS319a_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_WS272_ASDNGa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_WS272_BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_WS272_NIC4aaa_RREF.txt"
+    ],
+    "azurite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Azurite_WS316_BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.1B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.2B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.3B_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.3B_NIC4ccu_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.1B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.2B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.3B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.3B_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.3B_NIC4ccu_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Lazurite_HS418.4B_ASDFRb_AREF.txt"
+    ],
+    "goethite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_GDS134_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_HS36.3B_NIC4bcb_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_HS36.3_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_MPCMA2-B_FineGr_adj_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_MPCMA2-C_M-Crsgrad2_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS219_(limonite)_BECKc_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS220_BECKc_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS220_NIC4cd_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS222_Coarse_Gr._BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_GDS134_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_GDS134_NIC4bbu_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_HS36.3B_NIC4bcb_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_HS36.3_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_MPCMA2-B_FineGr_adj_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_MPCMA2-C_M-Crsgrad2_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS219_(limonite)_BECKc_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS220_NIC4cd_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS222_Medium_Gr._BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS222_Medium_Gr._NIC4aau_RREF.txt"
+    ],
+    "malachite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.1B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.3B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.3B_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.3B_NIC4bb_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.4B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.1B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.3B_BECKb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.3B_NIC4bb_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.4B_ASDFRb_AREF.txt"
+    ]
+  },
+  "test_sources": {
+    "calcite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_REE-bearing_WS319a_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Calcite_WS272_ASDNGa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Calcite_HS48.3B_BECKa_AREF.txt"
+    ],
+    "azurite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.3B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Lazurite_HS418.4B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Azurite_WS316_BECKa_AREF.txt"
+    ],
+    "goethite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_GDS134_NIC4bbu_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS222_Medium_Gr._BECKa_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Goethite_WS222_Medium_Gr._NIC4aau_RREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS220_BECKc_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Goethite_WS222_Coarse_Gr._BECKa_AREF.txt"
+    ],
+    "malachite": [
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07a/ChapterM_Minerals/splib07a_Malachite_HS254.2B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.2B_ASDFRb_AREF.txt",
+      "external_data/usgs_splib07/ASCIIData/ASCIIdata_splib07b/ChapterM_Minerals/splib07b_Malachite_HS254.3B_ASDFRb_AREF.txt"
+    ]
+  },
+  "counts": {
+    "train_total": 50,
+    "test_total": 14,
+    "train_per_class": {
+      "calcite": 11,
+      "azurite": 11,
+      "goethite": 19,
+      "malachite": 9
+    },
+    "test_per_class": {
+      "calcite": 3,
+      "azurite": 3,
+      "goethite": 5,
+      "malachite": 3
+    }
+  }
+}

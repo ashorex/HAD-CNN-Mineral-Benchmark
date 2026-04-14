@@ -1,0 +1,92 @@
+{
+  "description": "Section 5.6 repeated grouped source-level holdout reconstructed from the uploaded code files.",
+  "group_unit": "source_file",
+  "dataset_builder": "build_repeated_holdout(config)",
+  "outer_partition_strategy": "fixed_quota_source_holdout_by_class",
+  "outer_seeds": [
+    42,
+    52,
+    62,
+    72,
+    82,
+    92,
+    102,
+    112,
+    122,
+    132
+  ],
+  "n_outer_splits": 10,
+  "test_quota_per_class": {
+    "0_calcite": 3,
+    "1_azurite": 3,
+    "2_goethite": 5,
+    "3_malachite": 3
+  },
+  "train_humidities": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "test_humidities": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "wavelength_range_um": [
+    0.35,
+    2.5
+  ],
+  "inner_grouped_cv": {
+    "enabled": true,
+    "n_folds": 4,
+    "fold_seed_rule": "split_seed + 1000"
+  },
+  "row_generation": {
+    "train_augment_times": 10,
+    "test_repeat_times": 10
+  },
+  "model_training_over_each_split": {
+    "models": [
+      "hda",
+      "resnet",
+      "concat",
+      "cnn"
+    ],
+    "report_names": {
+      "hda": "HDA-CNN",
+      "resnet": "ResNet1D",
+      "concat": "Concat-CNN",
+      "cnn": "1D-CNN"
+    },
+    "run_seeds": [
+      42,
+      52,
+      62,
+      72,
+      82
+    ],
+    "epochs": 60,
+    "batch_size": 32,
+    "optimizer": {
+      "name": "Adam",
+      "lr": 0.0002,
+      "weight_decay": 0.0001,
+      "scheduler": "StepLR(step_size=20, gamma=0.5)"
+    },
+    "loss": "weighted_cross_entropy"
+  },
+  "outputs": {
+    "dataset_root": "Dataset/NIR_repeated_holdout",
+    "manifest_file": "Dataset/NIR_repeated_holdout/manifest.csv",
+    "per_split_meta": "Dataset/NIR_repeated_holdout/split_XX_seed_YY/meta.json",
+    "result_root": "results/repeated_holdout_5seeds"
+  },
+  "notes": [
+    "This file reflects the uploaded Section 5.6 code rather than the prose-only description in the manuscript.",
+    "The code-derived humidity split here differs from the Experiment 2 split described in the manuscript body."
+  ]
+}

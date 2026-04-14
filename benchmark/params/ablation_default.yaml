@@ -1,0 +1,10 @@
+experiment: exp58_ablation
+variants:
+  - had_cnn_full
+  - late_fusion_control
+  - modulation_only
+  - had_cnn_no_residual
+
+reference_split: benchmark/splits/humidity_split_cross.json
+reference_params: benchmark/params/perturbation_default.yaml
+seeds: [42, 52, 62, 72, 82]

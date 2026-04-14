@@ -1,0 +1,15 @@
+water_absorption:
+  gaussian_centers_um: [1.40, 1.90]
+  peak_width_beta_um: 0.015
+
+perturbation:
+  alpha: 2.0
+  delta: 0.0015
+  sigma0: 0.8
+  eta: 1.2
+  kappa: 0.02
+
+augmentation:
+  intensity_scale_range: [0.98, 1.02]
+  wavelength_offset_range: [-0.001, 0.001]
+  gaussian_noise_std_range: [0.0, 0.01]

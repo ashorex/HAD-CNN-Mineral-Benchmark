@@ -1,0 +1,91 @@
+{
+  "experiment": "5.10 alternative non-overlapping humidity splits",
+  "dataset_dir_default": "Dataset/NIR_cross_humidity",
+  "results_root_default": "results/exp510_non_overlapping",
+  "presets": [
+    {
+      "description": "Alternative non-overlapping humidity split A (current odd-train/even-test split from exp510_dataset.py)",
+      "preset_name": "split_A_current",
+      "train_humidity_levels": [
+        0.1,
+        0.3,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "test_humidity_levels": [
+        0.0,
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "non_overlapping": true,
+      "source": "exp510_dataset.py PRESET_SPLITS['split_A_current']"
+    },
+    {
+      "description": "Alternative non-overlapping humidity split B (staggered split from exp510_dataset.py)",
+      "preset_name": "split_B_shifted",
+      "train_humidity_levels": [
+        0.0,
+        0.18,
+        0.36,
+        0.54,
+        0.72
+      ],
+      "test_humidity_levels": [
+        0.09,
+        0.27,
+        0.45,
+        0.63,
+        0.81
+      ],
+      "non_overlapping": true,
+      "source": "exp510_dataset.py PRESET_SPLITS['split_B_shifted']"
+    },
+    {
+      "description": "Alternative non-overlapping humidity split C (second staggered split from exp510_dataset.py)",
+      "preset_name": "split_C_shifted",
+      "train_humidity_levels": [
+        0.05,
+        0.23,
+        0.41,
+        0.59,
+        0.77
+      ],
+      "test_humidity_levels": [
+        0.14,
+        0.32,
+        0.5,
+        0.68,
+        0.86
+      ],
+      "non_overlapping": true,
+      "source": "exp510_dataset.py PRESET_SPLITS['split_C_shifted']"
+    }
+  ],
+  "run_seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "epochs_default": 60,
+  "batch_size_default": 32,
+  "optimizer": {
+    "name": "Adam",
+    "lr": 0.0002,
+    "weight_decay": 0.0001
+  },
+  "n_train_aug_default": 10,
+  "n_test_repeat_default": 10,
+  "model_used_in_exp510_train_py": "HDA_CNN",
+  "source_files": [
+    "exp510_dataset.py",
+    "exp510_train.py",
+    "exp510_summarize.py",
+    "exp510_plot.py",
+    "run_exp510_all.sh"
+  ]
+}

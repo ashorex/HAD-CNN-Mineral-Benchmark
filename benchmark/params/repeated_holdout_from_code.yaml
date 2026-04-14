@@ -1,0 +1,62 @@
+repeated_holdout:
+  dataset_builder: build_repeated_holdout(config)
+  outer_partition_strategy: fixed_quota_source_holdout_by_class
+  outer_seeds: [42, 52, 62, 72, 82, 92, 102, 112, 122, 132]
+  n_outer_splits: 10
+  test_quota_per_class:
+    calcite: 3
+    azurite: 3
+    goethite: 5
+    malachite: 3
+
+  train_humidities: [0.0, 0.2, 0.4, 0.6, 0.8]
+  test_humidities: [0.1, 0.3, 0.5, 0.7, 0.9]
+  wavelength_range_um: [0.35, 2.5]
+
+  inner_grouped_cv:
+    enabled: true
+    n_folds: 4
+    fold_seed_rule: split_seed + 1000
+
+  row_generation:
+    train_augment_times: 10
+    test_repeat_times: 10
+
+  training_over_each_split:
+    models: [hda, resnet, concat, cnn]
+    report_names:
+      hda: HDA-CNN
+      resnet: ResNet1D
+      concat: Concat-CNN
+      cnn: 1D-CNN
+    run_seeds: [42, 52, 62, 72, 82]
+    epochs: 60
+    batch_size: 32
+    optimizer:
+      name: Adam
+      lr: 0.0002
+      weight_decay: 0.0001
+      scheduler: StepLR(step_size=20, gamma=0.5)
+    loss: weighted_cross_entropy
+
+  humidity_model:
+    alpha: 2.0
+    shift: 0.0015
+    sigma0: 0.8
+    sigma_h: 1.2
+    baseline_k: 0.02
+
+  augmentation:
+    scale: [0.98, 1.02]
+    shift: [-0.001, 0.001]
+    slope: [-0.01, 0.01]
+    noise_std: [0.002, 0.008]
+
+  water_absorption:
+    peak_centers_um: [0.97, 1.19, 1.45, 1.94]
+    width_um: 0.015
+
+  outputs:
+    dataset_root: Dataset/NIR_repeated_holdout
+    manifest_file: Dataset/NIR_repeated_holdout/manifest.csv
+    result_root: results/repeated_holdout_5seeds

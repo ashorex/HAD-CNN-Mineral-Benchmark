@@ -1,0 +1,20 @@
+{
+  "description": "Alternative non-overlapping humidity split A (current odd-train/even-test split from exp510_dataset.py)",
+  "preset_name": "split_A_current",
+  "train_humidity_levels": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "test_humidity_levels": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "non_overlapping": true,
+  "source": "exp510_dataset.py PRESET_SPLITS['split_A_current']"
+}
