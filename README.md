@@ -35,6 +35,18 @@ A reproducible benchmark-oriented framework for humidity-aware mineral spectral 
   - train: `[0.05, 0.23, 0.41, 0.59, 0.77]`
   - test: `[0.14, 0.32, 0.50, 0.68, 0.86]`
 
+## Quick start
+
+1. Clone this repository and create the Python environment using `environment.yml` or `requirements.txt`.
+2. Download the required raw source spectra from the public USGS Spectral Library and place them under the repository data path expected by the benchmark scripts.
+3. Run the preprocessing and benchmark-construction scripts to rebuild the humidity-aware datasets, source-file-level splits, and benchmark metadata from the public USGS source spectra.
+4. Run the matched-humidity and cross-humidity experiment pipelines to reproduce the main benchmark results reported in the manuscript.
+5. Use the evaluation and result-aggregation scripts to regenerate the main tables and figures from the manuscript and Supplementary Material.
+
+## Reproducibility note
+
+This repository does not redistribute raw USGS source spectra, pretrained checkpoints, or large cached intermediate files. The reported results are intended to be reproducible from the public USGS source spectra together with the scripts and benchmark settings provided in this repository.
+
 ## Notes
 
 - This starter repository intentionally excludes checkpoints, pretrained weights, large cached benchmark tables, and raw mirrored USGS source files.
