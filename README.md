@@ -9,8 +9,8 @@ A reproducible benchmark-oriented framework for humidity-aware mineral spectral 
 - test humidities: `np.arange(0.1, 1.0, 0.05)`
 
 ### Experiment 2 / NIR_cross_humidity (extracted from uploaded train.csv and test.csv)
-- train humidities: `[0.0, 0.2, 0.4, 0.6, 0.8]`
-- test humidities: `[0.1, 0.3, 0.5, 0.7, 0.9]`
+- train humidities: `[0.1, 0.3, 0.5, 0.7, 0.9]`
+- test humidities: `[0.0, 0.2, 0.4, 0.6, 0.8]`
 - unique source split: train `50` / test `14`
 - per-class unique source counts:
   - train: `{0: 11, 1: 11, 2: 19, 3: 9}`
