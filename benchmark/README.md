@@ -20,5 +20,5 @@ This folder stores benchmark split definitions and default parameter files extra
 ## Important note
 
 The uploaded `NIR_cross_humidity` dataset uses:
-- train humidities: [0.0, 0.2, 0.4, 0.6, 0.8]
-- test humidities: [0.1, 0.3, 0.5, 0.7, 0.9]
+- train humidities: [0.1, 0.3, 0.5, 0.7, 0.9]
+- test humidities: [0.0, 0.2, 0.4, 0.6, 0.8]
